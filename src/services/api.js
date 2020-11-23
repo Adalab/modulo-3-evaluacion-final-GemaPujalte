@@ -1,13 +1,14 @@
-const getApiData = () => {
+const getDataFromApi = (search) => {
   return fetch(
-    "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json"
+    "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json?search=" +
+      search
   )
     .then((response) => response.json())
     .then((data) => {
-      return data;
+      return data.results;
     });
 };
 
 export default {
-  getApiData: getApiData,
+  getDataFromApi: getDataFromApi,
 };
