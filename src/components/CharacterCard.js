@@ -11,7 +11,7 @@ const CharacterCard = (props) => {
           <img
             src={props.image}
             title={props.name}
-            alt={`Este personaje es : ${props.name} `}
+            alt={`This character is : ${props.name} `}
           />
         </Link>
 

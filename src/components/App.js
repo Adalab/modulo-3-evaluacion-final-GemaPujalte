@@ -49,8 +49,6 @@ const App = () => {
           episode={foundCharacter.episode.length}
         />
       );
-    } else {
-      return <p>Personaje no encontrado</p>;
     }
   };
 

@@ -15,6 +15,7 @@ const Filters = (props) => {
       <input
         type="text"
         id="name"
+        placeholder="Who are you looking for?"
         value={props.filterText} //control filter input
         onChange={handleFilter}
       />
