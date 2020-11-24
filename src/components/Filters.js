@@ -12,7 +12,12 @@ const Filters = (props) => {
   return (
     <form onSubmit={handleFormSubmit}>
       <label htmlFor="name">Filtrar por nombre</label>
-      <input type="text" id="name" onChange={handleFilter} />
+      <input
+        type="text"
+        id="name"
+        value={props.filterText} //control filter input
+        onChange={handleFilter}
+      />
     </form>
   );
 };

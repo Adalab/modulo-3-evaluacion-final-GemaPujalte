@@ -17,7 +17,10 @@ const CharacterList = (props) => {
   });
   return (
     <div>
-      <Filters handleFilter={props.handleFilter} />
+      <Filters
+        filterText={props.filterText}
+        handleFilter={props.handleFilter}
+      />
       <section>{charactersItems}</section>
     </div>
   );

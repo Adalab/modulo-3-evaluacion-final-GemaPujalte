@@ -62,6 +62,7 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <CharacterList
+            filterText={filterText}
             characters={filteredCharacters}
             handleFilter={handleFilter}
           />

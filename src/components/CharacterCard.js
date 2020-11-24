@@ -6,17 +6,18 @@ import PropTypes from "prop-types";
 const CharacterCard = (props) => {
   return (
     <>
-      <Link to={`/character-detail/${props.id}`} className="link">
-        <article>
+      <article>
+        <Link to={`/character-detail/${props.id}`} className="link">
           <img
             src={props.image}
             title={props.name}
             alt={`Este personaje es : ${props.name} `}
           />
-          <h3>{props.name}</h3>
-          <p>{props.species}</p>
-        </article>
-      </Link>
+        </Link>
+
+        <h3>{props.name}</h3>
+        <p>{props.species}</p>
+      </article>
     </>
   );
 };
