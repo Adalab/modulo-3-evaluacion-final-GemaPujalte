@@ -18,17 +18,16 @@ const App = () => {
   }, [search]);
 
   //events
-  const handleSearch = (ev) => {
-    setSearch(ev.target.value);
+  const handleFilter = (filterText) => {
+    // setSearch(ev.target.value);
+    console.log("he cambiado", filterText);
   };
 
   return (
     <div>
       <header></header>
       <main>
-        <label htmlFor="">Busca!!!</label>
-        <input type="text" onChange={handleSearch} />
-        <CharacterList characters={characters} />
+        <CharacterList characters={characters} handleFilter={handleFilter} />
       </main>
     </div>
   );
