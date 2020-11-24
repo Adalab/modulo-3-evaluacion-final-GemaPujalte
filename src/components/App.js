@@ -11,11 +11,14 @@ const App = () => {
   //state
   const [characters, setCharacters] = useState([]);
   const [filterText, setFilterText] = useState("");
+  const [IsLoading, setIsLoading] = useState(false);
 
   //api
   useEffect(() => {
+    setIsLoading(true);
     api.getDataFromApi().then((data) => {
       setCharacters(data); //guardo el array con todos los datos
+      setIsLoading(false);
     });
   }, []);
 
@@ -50,6 +53,8 @@ const App = () => {
       return <p>Personaje no encontrado</p>;
     }
   };
+
+  console.log(IsLoading);
 
   return (
     <div>
