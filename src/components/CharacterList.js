@@ -4,8 +4,6 @@ import Filters from "./Filters";
 
 const CharacterList = (props) => {
   const charactersItems = props.characters.map((character) => {
-    console.log(character.image);
-
     return (
       <CharacterCard
         key={character.id}

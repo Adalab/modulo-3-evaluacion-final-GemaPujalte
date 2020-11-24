@@ -6,28 +6,34 @@ import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   //state
-  const [search, setSearch] = useState("");
   const [characters, setCharacters] = useState([]);
+  const [filterText, setFilterText] = useState("");
 
   //api
   useEffect(() => {
-    api.getDataFromApi(search).then((data) => {
-      console.log(data);
+    api.getDataFromApi().then((data) => {
       setCharacters(data); //guardo el array con todos los datos
     });
-  }, [search]);
+  }, []);
 
   //events
   const handleFilter = (filterText) => {
-    // setSearch(ev.target.value);
-    console.log("he cambiado", filterText);
+    setFilterText(filterText);
   };
+
+  const filteredCharacters = characters.filter((character) => {
+    return character.name.toLowerCase().includes(filterText.toLowerCase());
+  });
+  console.log(filteredCharacters);
 
   return (
     <div>
       <header></header>
       <main>
-        <CharacterList characters={characters} handleFilter={handleFilter} />
+        <CharacterList
+          characters={filteredCharacters}
+          handleFilter={handleFilter}
+        />
       </main>
     </div>
   );
