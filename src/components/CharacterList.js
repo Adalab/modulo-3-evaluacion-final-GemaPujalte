@@ -3,10 +3,11 @@ import CharacterCard from "./CharacterCard";
 import Filters from "./Filters";
 
 const CharacterList = (props) => {
-  const charactersItems = props.characters.map((character) => {
+  const charactersItems = props.characters.map((character, index) => {
     return (
       <CharacterCard
-        key={character.id}
+        key={index}
+        id={character.id}
         title={character.name}
         image={character.image}
         name={character.name}
