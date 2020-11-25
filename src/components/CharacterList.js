@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/CharacterList.scss";
 import CharacterCard from "./CharacterCard";
 import Filters from "./Filters";
 import ReturnsError from "./ReturnsError";
@@ -25,7 +26,7 @@ const CharacterList = (props) => {
           filterText={props.filterText}
           handleFilter={props.handleFilter}
         />
-        <section>{charactersItems}</section>
+        <section className="cardList">{charactersItems}</section>
       </div>
     );
   }

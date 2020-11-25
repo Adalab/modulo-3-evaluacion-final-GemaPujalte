@@ -1,3 +1,5 @@
+import "../stylesheets/App.scss";
+
 const ReturnsError = () => {
   return (
     <p className="searchErrorText">

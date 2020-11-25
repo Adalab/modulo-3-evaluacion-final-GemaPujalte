@@ -1,14 +1,14 @@
 import logo from "../images/logo.png";
-// import "./Header.scss";
+import "../stylesheets/Header.scss";
 
 const Header = () => {
   return (
     <header className="header">
       <img
-        className="header__title__image"
+        className="header__logo"
         src={logo}
-        alt="Rick and Morty Cards"
-        title="Rick and Morty Cards"
+        alt="Rick and Morty "
+        title="Rick and Morty "
       />
     </header>
   );

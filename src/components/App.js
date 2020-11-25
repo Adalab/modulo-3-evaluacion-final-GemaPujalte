@@ -55,18 +55,20 @@ const App = () => {
   console.log(IsLoading);
 
   return (
-    <div>
+    <div className="App">
       <Header />
-      <Switch>
-        <Route exact path="/">
-          <CharacterList
-            filterText={filterText}
-            characters={filteredCharacters}
-            handleFilter={handleFilter}
-          />
-        </Route>
-        <Route path="/character-detail/:id" component={renderDetail} />
-      </Switch>
+      <main className="App__main">
+        <Switch>
+          <Route exact path="/">
+            <CharacterList
+              filterText={filterText}
+              characters={filteredCharacters}
+              handleFilter={handleFilter}
+            />
+          </Route>
+          <Route path="/character-detail/:id" component={renderDetail} />
+        </Switch>
+      </main>
     </div>
   );
 };

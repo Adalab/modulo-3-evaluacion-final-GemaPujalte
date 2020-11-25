@@ -1,0 +1,21 @@
+.character__detail {
+  background-color: #10aac2;
+  display: flex;
+  align-items: center;
+  width: 620px;
+  padding: 36px 12px 36px 36px;
+  margin-top: 20px;
+}
+.character__detail--img {
+  width: 230px;
+}
+
+.character__detail--info {
+  text-align: left;
+  padding: 0 0 0 36px;
+  margin: 0;
+}
+
+.character__detail--data {
+  margin: 6px 0;
+}

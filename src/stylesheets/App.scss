@@ -1,6 +1,14 @@
 .App {
+  background-color: #1d1b1c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-}
-.link {
-  text-decoration: none;
+  color: whitesmoke;
+  &__main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
