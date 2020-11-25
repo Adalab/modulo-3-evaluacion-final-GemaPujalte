@@ -1,13 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.scss";
 const CharacterDetail = (props) => {
   return (
     <>
+      <Link to="/">
+        <div className="return__link">
+          <span> Back home </span>
+        </div>
+      </Link>
+
       <article className="character__detail">
         <img
           className="character__detail--img"
           src={props.img}
-          alt={`Este personaje es : ${props.name} `}
+          alt={`This character is : ${props.name} `}
         />
         <div className="character__detail--info">
           <h2>{`Name: ${props.name}`}</h2>

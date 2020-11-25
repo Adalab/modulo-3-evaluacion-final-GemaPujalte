@@ -1,7 +1,10 @@
 .header {
-  height: fit-content;
-  &__logo {
-    width: 60%;
-    margin-top: 36px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-title {
+  margin-top: 12px;
+  width: 500px;
 }
