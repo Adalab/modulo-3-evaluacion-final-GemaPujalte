@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.scss";
+
 const CharacterDetail = (props) => {
   return (
     <>
