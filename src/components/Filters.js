@@ -3,7 +3,11 @@ import "../stylesheets/Filters.scss";
 
 const Filters = (props) => {
   const handleFilter = (ev) => {
-    props.handleFilter(ev.target.value);
+    const data = {
+      id: ev.target.id,
+      value: ev.target.value,
+    };
+    props.handleFilter(data);
   };
 
   //prevent error when pressing enter
@@ -19,6 +23,15 @@ const Filters = (props) => {
         id="name"
         placeholder="Who are you looking for?"
         value={props.filterText} //control filter input
+        onChange={handleFilter}
+      />
+
+      <label htmlFor="episodes"></label>
+
+      <input
+        type="number"
+        id="episodes"
+        value={props.filterEpisodes}
         onChange={handleFilter}
       />
     </form>
